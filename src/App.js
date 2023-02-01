@@ -27,7 +27,7 @@ function App() {
   // Confirm the payment
   const moneiTokenHandler = (token) => {
     return window.monei
-      .confirmPayment({ paymentId: paymentId, paymentToken: token })
+      .confirmPayment({ paymentId: paymentId, paymentToken: token, paymentMethod: { card: { cardholderName: "Samuel Gay" } }  })
       .then(function (result) {
         // At this moment you can show a customer the payment result
         // But you should always rely on the result passed to the callback endpoint on your server
